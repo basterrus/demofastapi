@@ -1,15 +1,37 @@
+from typing import List
+
 from fastapi import FastAPI
+from pydantic import BaseModel
 from database import *
 
-
 app = FastAPI()
-db = Database()
 
 
-@app.get('/psychotherapists')
+class DataPsychotherapistsOut(BaseModel):
+    id: int
+    name: str
+    image: str
+    methods: int
+
+    class Config:
+        orm_mode = True
+
+
+class DataMethodsOut(BaseModel):
+    id: int
+    methods: str
+
+    class Config:
+        orm_mode = True
+
+
+db = Database()  # Инициализация базы данных
+
+
+@app.get('/psychotherapists', response_class=List[DataPsychotherapistsOut])
 async def get_all_psychotherapists():
     """Функция возвращает список всех доступных психотерапевтов из БД"""
-    queryset = db.session.query(db.Methods)
+    queryset = db.session.query(db.Methods).all()
     print(queryset)
     return queryset.all()
 

@@ -63,14 +63,10 @@ class Database:
                 self.session.add(methods)
                 self.session.commit()
 
-
-
-
             # methods = self.Methods()
             # print(methods.id)
             # new_psychotherapists = self.Psychotherapists(name, image, methods, airtable_id)
             # self.session.add(new_psychotherapists)
-
 
 
 if __name__ == '__main__':
