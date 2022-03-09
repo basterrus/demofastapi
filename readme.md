@@ -3,8 +3,8 @@
 
 ## Запуск проекта
 
-1. Склонируйте репозиторий с помощью git
-    `https://github.com/basterrus/demofastapi.git`
+1. Склонируйте репозиторий с помощью git    
+      `https://github.com/basterrus/demofastapi.git`
 2. Перейти в папку:   
    `cd demofasapi`
 3. Создать и активировать виртуальное окружение Python.
