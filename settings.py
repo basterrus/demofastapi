@@ -1,5 +1,6 @@
 # Airtable data
 API_KEY = 'key55WKmVdvyHhLNv'
+BASE_ID = 'appMdHCwkJ26Mnrkz'
 
 
 # Postgres data
